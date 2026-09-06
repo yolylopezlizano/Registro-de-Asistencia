@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Jornada - LA Asociados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    
+    <!-- Logo de la empresa -->
+    <div class="logo-container">
+      <img src="logo.jpg" alt="LA Asociados" class="logo">
+    </div>
+
+    <h1>Registro de Asistencia</h1>
+
+    <!-- Reloj en vivo -->
+    <div class="reloj" id="reloj">Cargando hora...</div>
+
+    <p class="label">Seleccione su nombre:</p>
+    <div class="grid-2">
+      <button type="button" id="btn-Fernanda" class="btn btn-user" onclick="seleccionarEmpleado('Fernanda')">Fernanda</button>
+      <button type="button" id="btn-Rocio" class="btn btn-user" onclick="seleccionarEmpleado('Rocio')">Rocio</button>
+    </div>
+
+    <p class="label">¿Qué desea registrar?</p>
+    <div class="grid-2">
+      <button type="button" id="btn-ENTRADA" class="btn btn-entrada" onclick="seleccionarTipo('ENTRADA')">🟢 ENTRADA</button>
+      <button type="button" id="btn-SALIDA" class="btn btn-salida" onclick="seleccionarTipo('SALIDA')">🔴 SALIDA</button>
+    </div>
+
+    <div class="resumen" id="resumen">
+      Empleado: <span id="txtEmpleado">-</span> | Tipo: <span id="txtTipo">-</span>
+    </div>
+
+    <!-- Sección de actividad (Oculta por defecto) -->
+    <div id="seccion-actividad" style="display: none;">
+      <label for="actividad" class="label">Actividad del día:</label>
+      <textarea id="actividad" placeholder="Escriba brevemente lo que realizó..."></textarea>
+    </div>
+
+    <button type="button" class="btn btn-guardar" onclick="guardarRegistro()">GUARDAR</button>
+    
+    <p id="mensaje" class="mensaje"></p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
