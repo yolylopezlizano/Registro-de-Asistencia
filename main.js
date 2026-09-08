@@ -21,6 +21,7 @@ function seleccionarEmpleado(nombre) {
 
   document.getElementById('btn-Fernanda').classList.remove('activo');
   document.getElementById('btn-Rocio').classList.remove('activo');
+  document.getElementById('btn-Beatriz').classList.remove('activo');
   document.getElementById('btn-' + nombre).classList.add('activo');
 }
 
